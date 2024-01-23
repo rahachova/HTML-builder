@@ -27,7 +27,7 @@ function copyDirectory(folderToRead, folderToCopy) {
   );
 }
 
-fs.rmdir(path.resolve(`${__dirname}/project-dist`), () => {
+fs.rm(path.resolve(`${__dirname}/project-dist`), {recursive: true}, () => {
   fs.mkdir(
     path.resolve(`${__dirname}/project-dist`),
     { recursive: true },
